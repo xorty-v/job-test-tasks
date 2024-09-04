@@ -5,8 +5,6 @@ namespace NemoTravel.FinanceCore.Services;
 
 public class CurrencyConverterService : ICurrencyConverterService
 {
-    //   private const string IntermediateCurrency = "USD";
-
     private readonly string[] _intermediateCurrencies = { "USD", "EUR" };
     private readonly IExchangeRateProvider _exchangeRateProvider;
 
