@@ -8,7 +8,7 @@ namespace MedicalTestTask.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class DoctorsController
+public class DoctorsController : ControllerBase
 {
     private readonly MedicalDbContext _dbContext;
 
