@@ -1,0 +1,56 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+service Match {
+    rpc GetMatches (GetMatchesRequest) returns (GetMatchesResponse);
+    rpc JoinMatch (JoinMatchRequest) returns (JoinMatchResponse);
+    rpc PlayGame (PlayGameRequest) returns (PlayGameResponse);
+}
+
+message MatchInfo {
+    int64 match_id = 1;
+    double stake = 2;
+    int32 free_slots = 3;
+}
+
+message GetMatchesRequest {}
+
+message GetMatchesResponse {
+    repeated MatchInfo matches = 1;
+}
+
+
+message JoinMatchRequest {
+    int64 match_id = 1;
+    int64 user_id = 2;
+}
+
+message JoinMatchResponse {
+    bool is_successful = 1;
+}
+
+enum MatchStatus
+{
+    WaitingForOpponent = 0;
+    FirstUserWin = 1;
+    SecondUserWin = 2;
+    Draw = 3;
+}
+
+enum ChoiceType
+{
+    K = 0;
+    N = 1;
+    B = 2;
+}
+
+message PlayGameRequest {
+    int64 user_id = 1;
+    int64 match_id = 2;
+    ChoiceType choice = 3;
+}
+
+message PlayGameResponse {
+    MatchStatus status = 1;
+}

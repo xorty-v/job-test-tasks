@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70BA42A1-EA53-41F9-99EA-4DE49C3770E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roboline.Domain", "src\Roboline.Domain\Roboline.Domain.csproj", "{C7EED97E-60C3-491B-82DB-9FE29072B944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roboline.Persistence", "src\Roboline.Persistence\Roboline.Persistence.csproj", "{609165A4-44F7-406E-9FC4-AF13E6969C75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roboline.Service", "src\Roboline.Service\Roboline.Service.csproj", "{E9502218-A299-481E-9AEC-346711344AF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roboline.WebApi", "src\Roboline.WebApi\Roboline.WebApi.csproj", "{9C4D881B-FAD5-43D9-9A6F-22E1FFB20D25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AB09505-8327-4BC8-87B3-B87C9F80FCD7}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7EED97E-60C3-491B-82DB-9FE29072B944} = {70BA42A1-EA53-41F9-99EA-4DE49C3770E4}
+		{609165A4-44F7-406E-9FC4-AF13E6969C75} = {70BA42A1-EA53-41F9-99EA-4DE49C3770E4}
+		{E9502218-A299-481E-9AEC-346711344AF7} = {70BA42A1-EA53-41F9-99EA-4DE49C3770E4}
+		{9C4D881B-FAD5-43D9-9A6F-22E1FFB20D25} = {70BA42A1-EA53-41F9-99EA-4DE49C3770E4}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7EED97E-60C3-491B-82DB-9FE29072B944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7EED97E-60C3-491B-82DB-9FE29072B944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7EED97E-60C3-491B-82DB-9FE29072B944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7EED97E-60C3-491B-82DB-9FE29072B944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609165A4-44F7-406E-9FC4-AF13E6969C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609165A4-44F7-406E-9FC4-AF13E6969C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609165A4-44F7-406E-9FC4-AF13E6969C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609165A4-44F7-406E-9FC4-AF13E6969C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9502218-A299-481E-9AEC-346711344AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9502218-A299-481E-9AEC-346711344AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9502218-A299-481E-9AEC-346711344AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9502218-A299-481E-9AEC-346711344AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4D881B-FAD5-43D9-9A6F-22E1FFB20D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4D881B-FAD5-43D9-9A6F-22E1FFB20D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4D881B-FAD5-43D9-9A6F-22E1FFB20D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4D881B-FAD5-43D9-9A6F-22E1FFB20D25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

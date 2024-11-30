@@ -1,0 +1,28 @@
+﻿services:
+  roboline.backend:
+    image: roboline.webapi
+    build:
+      context: .
+      dockerfile: src/Roboline.WebApi/Dockerfile
+    ports:
+      - 5000:8080
+    restart: always
+    depends_on:
+      - roboline.db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=roboline.db,5432;Database=Roboline;User Id=postgres;Password=postgres;
+  roboline.db:
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+ 

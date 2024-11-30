@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+service Transaction {
+    rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse);
+}
+
+message GetBalanceRequest {
+    int64 user_id = 1;
+}
+
+message GetBalanceResponse {
+    double balance = 1;
+}
