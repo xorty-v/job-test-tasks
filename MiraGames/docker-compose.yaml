@@ -1,0 +1,38 @@
+﻿services:
+  backend:
+    image: backend
+    build:
+      context: .
+      dockerfile: src/backend/Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Database=Host=db;Port=5432;Database=AdminDashboard;Username=postgres;Password=postgres
+      - JwtOptions__AccessExpiresHours=12
+      - JwtOptions__RefreshExpiresDays=7
+      - JwtOptions__SecretKey=secretkeysecretkeysecretkeysecretkeysecretkeysecretkeysecretkey
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+  db:
+    image: postgres:16
+    container_name: admin_dashboard_db
+    environment:
+      POSTGRES_DB: AdminDashboard
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
