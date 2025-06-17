@@ -8,7 +8,7 @@ docker compose up --build
 
 Запустятся три контейнера:
 
-- **backend** – API на http://localhost:5000
+- **backend** – API на http://localhost:5000/swagger/index.html
 - **frontend** – React на http://localhost:5173
 - **db** – PostgreSQL на 5432
 
